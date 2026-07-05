@@ -2,15 +2,14 @@ import { useState, useEffect } from 'react'
 import './style.css'
 import Sidebar from './components/Sidebar'
 import Navbar from './components/Navbar'
+import Home from './components/Home'
 import About from './components/About'
-import Resume from './components/Resume'
-import Portfolio from './components/Portfolio'
-import Blog from './components/Blog'
+import Services from './components/Services'
 import Contact from './components/Contact'
 import ThemeToggle from './components/ThemeToggle'
 
 function App() {
-  const [activePage, setActivePage] = useState('about')
+  const [activePage, setActivePage] = useState('home')
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem('theme') || 'dark'
   })
@@ -30,10 +29,9 @@ function App() {
       <Sidebar />
       <div className="main-content">
         <Navbar activePage={activePage} setActivePage={setActivePage} />
-        <About activePage={activePage} />
-        <Resume activePage={activePage} />
-        <Portfolio activePage={activePage} />
-        <Blog activePage={activePage} />
+        <Home activePage={activePage} setActivePage={setActivePage} />
+        <About activePage={activePage} setActivePage={setActivePage} />
+        <Services activePage={activePage} setActivePage={setActivePage} />
         <Contact activePage={activePage} />
       </div>
     </main>

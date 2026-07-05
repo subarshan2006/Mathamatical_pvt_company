@@ -1,163 +1,114 @@
-import { useState } from 'react'
-
-const testimonials = [
+const experience = [
   {
-    avatar: '/assets/images/avatar-1.png',
-    name: 'Daniel lewis',
-    text: 'Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.',
+    title: 'Self-Employed Online Math Tutor',
+    years: 'March 2026 – Present',
+    text: 'Now offering fully independent, one-on-one online tutoring, continuing to serve both US and Canadian curriculum students.',
   },
   {
-    avatar: '/assets/images/avatar-2.png',
-    name: 'Jessica miller',
-    text: 'Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.',
+    title: 'Growing Stars — Online Math Tutor',
+    years: '2022 – March 2026',
+    text: 'Taught the US curriculum from 2022 onward — Elementary through Pre-Calculus, Algebra I & II, Geometry I & II, Trigonometry, and AP-level topics — with Canadian curriculum added from 2024.',
   },
   {
-    avatar: '/assets/images/avatar-3.png',
-    name: 'Emily evans',
-    text: 'Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.',
+    title: 'Little Angels English Hr. Sec. School, Karur',
+    years: '2017 – 2021',
+    text: 'Mathematics teacher for Middle School, High School, and Grades 11–12, following the ICSE and IB curricula.',
   },
   {
-    avatar: '/assets/images/avatar-4.png',
-    name: 'Henry william',
-    text: 'Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.',
+    title: 'The Indian Public School (TIPS)',
+    years: '2015 – 2017',
+    text: 'Homeroom and subject teacher for the IB Primary Years Programme (PYP), Grades 1–5, and the IB Middle Years Programme (MYP).',
   },
 ]
 
-const clients = [
-  '/assets/images/logo-1-color.png',
-  '/assets/images/logo-2-color.png',
-  '/assets/images/logo-3-color.png',
-  '/assets/images/logo-4-color.png',
-  '/assets/images/logo-5-color.png',
-  '/assets/images/logo-6-color.png',
-]
+function TimelineSection({ icon, title, items }) {
+  return (
+    <section className="timeline">
+      <div className="title-wrapper">
+        <div className="icon-box">
+          <ion-icon name={icon}></ion-icon>
+        </div>
+        <h3 className="h3">{title}</h3>
+      </div>
+      <ol className="timeline-list">
+        {items.map((item) => (
+          <li className="timeline-item" key={item.title}>
+            <h4 className="h4 timeline-item-title">{item.title}</h4>
+            <span>{item.years}</span>
+            <p className="timeline-text">{item.text}</p>
+          </li>
+        ))}
+      </ol>
+    </section>
+  )
+}
 
-const services = [
-  {
-    icon: '/assets/images/icon-design.svg',
-    alt: 'design icon',
-    title: 'Web design',
-    text: 'The most modern and high-quality design made at a professional level.',
-  },
-  {
-    icon: '/assets/images/icon-dev.svg',
-    alt: 'Web development icon',
-    title: 'Web development',
-    text: 'High-quality development of sites at the professional level.',
-  },
-  {
-    icon: '/assets/images/icon-app.svg',
-    alt: 'mobile app icon',
-    title: 'Mobile apps',
-    text: 'Professional development of applications for iOS and Android.',
-  },
-  {
-    icon: '/assets/images/icon-photo.svg',
-    alt: 'camera icon',
-    title: 'Photography',
-    text: 'I make high-quality photos of any category at a professional level.',
-  },
-]
-
-function About({ activePage }) {
-  const [modal, setModal] = useState(null)
-
-  const openModal = (t) => setModal(t)
-  const closeModal = () => setModal(null)
-
+function About({ activePage, setActivePage }) {
   return (
     <article className={`about${activePage === 'about' ? ' active' : ''}`} data-page="about">
 
       <header>
-        <h2 className="h2 article-title">About me</h2>
+        <h2 className="h2 article-title">About Me</h2>
       </header>
 
-      <section className="about-text">
+      <p className="page-subtitle">
+        11+ years of helping students see math differently.
+      </p>
+
+      {/* My Story */}
+      <section className="about-text" style={{ marginBottom: '40px' }}>
+        <h3 className="h3" style={{ marginBottom: '15px' }}>My Story</h3>
         <p>
-          I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media.
-          I enjoy turning complex problems into simple, beautiful and intuitive designs.
+          I've spent over 11 years teaching mathematics — starting in the classroom and later moving into fully online, one-on-one tutoring. Along the way, I've taught students following the US and Canadian curricula, as well as international frameworks, giving me a broad perspective on how math is taught differently around the world — and, more importantly, how students actually learn it.
         </p>
         <p>
-          My job is to build your website so that it is functional and user-friendly but at the same time attractive.
-          Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
-          across your message and identity in the most creative way. I created web design for many famous brand companies.
+          What hasn't changed over the years is my belief that every student can succeed in math when the explanation finally clicks. My job isn't to rush through topics — it's to slow down wherever needed until real understanding takes hold.
         </p>
       </section>
 
-      {/* service */}
-      <section className="service">
-        <h3 className="h3 service-title">What i'm doing</h3>
-        <ul className="service-list">
-          {services.map((s) => (
-            <li className="service-item" key={s.title}>
-              <div className="service-icon-box">
-                <img src={s.icon} alt={s.alt} width="40" />
-              </div>
-              <div className="service-content-box">
-                <h4 className="h4 service-item-title">{s.title}</h4>
-                <p className="service-item-text">{s.text}</p>
-              </div>
-            </li>
-          ))}
-        </ul>
+      {/* My Teaching Philosophy */}
+      <section className="about-text" style={{ marginBottom: '40px' }}>
+        <h3 className="h3" style={{ marginBottom: '15px' }}>My Teaching Philosophy</h3>
+        <p>
+          My approach is a little different — I rarely give students the answer directly. Instead, I ask guiding questions and offer small clues, letting them work their way to the answer themselves. It takes a bit more patience, but the payoff is real: students build genuine confidence, because they know the understanding is theirs, not something handed to them.
+        </p>
+        <p>
+          I also put a lot of care into creating a relaxed, pressure-free environment from the very first session. Students feel comfortable asking questions and making mistakes without hesitation — this comfort is often what unlocks real progress, especially for students who have felt discouraged by math in the past.
+        </p>
+        <p>
+          I want every student to walk away believing that math is simple and manageable — not something to fear, and not something their past grades have to define. Combined with consistent practice and a good amount of patience, this approach is what helps students stay motivated and genuinely engaged with their work, rather than dreading it.
+        </p>
+        <p>
+          When students understand the "why" behind a method, they're able to handle new problems confidently — not just repeat what they've memorized. I also stay in regular contact with parents, so progress is always visible and there are no surprises.
+        </p>
       </section>
 
-      {/* testimonials */}
-      <section className="testimonials">
-        <h3 className="h3 testimonials-title">Testimonials</h3>
-        <ul className="testimonials-list has-scrollbar">
-          {testimonials.map((t) => (
-            <li className="testimonials-item" key={t.name}>
-              <div className="content-card" data-testimonials-item onClick={() => openModal(t)} style={{ cursor: 'pointer' }}>
-                <figure className="testimonials-avatar-box">
-                  <img src={t.avatar} alt={t.name} width="60" data-testimonials-avatar />
-                </figure>
-                <h4 className="h4 testimonials-item-title" data-testimonials-title>{t.name}</h4>
-                <div className="testimonials-text" data-testimonials-text>
-                  <p>{t.text}</p>
-                </div>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </section>
+      {/* Experience Timeline */}
+      <TimelineSection icon="book-outline" title="Experience Timeline" items={experience} />
 
-      {/* testimonials modal */}
-      <div className={`modal-container${modal ? ' active' : ''}`} data-modal-container>
-        <div className={`overlay${modal ? ' active' : ''}`} data-overlay onClick={closeModal}></div>
-        <section className="testimonials-modal">
-          <button className="modal-close-btn" data-modal-close-btn onClick={closeModal}>
-            <ion-icon name="close-outline"></ion-icon>
+      {/* CTA */}
+      <section className="services-cta" style={{ marginTop: '40px' }}>
+        <div className="services-cta-card content-card" style={{ paddingTop: '25px', cursor: 'default', textAlign: 'center' }}>
+          <h3 className="h3" style={{ marginBottom: '10px' }}>Want to know if I'm the right fit for your child?</h3>
+          <p className="services-cta-text">
+            Let's talk about your child's needs and how I can help.
+          </p>
+          <button
+            className="hero-cta-btn primary services-cta-btn"
+            onClick={() => {
+              setActivePage('contact')
+              window.scrollTo(0, 0)
+            }}
+          >
+            <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+            <span>Get in Touch</span>
           </button>
-          <div className="modal-img-wrapper">
-            <figure className="modal-avatar-box">
-              <img src={modal?.avatar || '/assets/images/avatar-1.png'} alt={modal?.name || ''} width="80" data-modal-img />
-            </figure>
-            <img src="/assets/images/icon-quote.svg" alt="quote icon" />
-          </div>
-          <div className="modal-content">
-            <h4 className="h3 modal-title" data-modal-title>{modal?.name}</h4>
-            <time dateTime="2021-06-14">14 June, 2021</time>
-            <div data-modal-text>
-              <p>{modal?.text}</p>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      {/* clients */}
-      <section className="clients">
-        <h3 className="h3 clients-title">Clients</h3>
-        <ul className="clients-list has-scrollbar">
-          {clients.map((logo, i) => (
-            <li className="clients-item" key={i}>
-              <a href="#">
-                <img src={logo} alt="client logo" />
-              </a>
-            </li>
-          ))}
-        </ul>
+        </div>
       </section>
+
+      <footer className="site-footer">
+        <p>© 2026 Kavitha JR — Online Math Tutor. All rights reserved.</p>
+      </footer>
 
     </article>
   )

@@ -1,4 +1,4 @@
-const pages = ['About', 'Resume', 'Portfolio', 'Blog', 'Contact']
+const pages = ['Home', 'About', 'Services', 'Contact']
 
 function Navbar({ activePage, setActivePage }) {
   return (

@@ -1,84 +1,85 @@
-import { useState } from 'react'
-
 function Contact({ activePage }) {
-  const [fullname, setFullname] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
-
-  const isValid = fullname.trim() !== '' && email.trim() !== '' && message.trim() !== ''
-
   return (
     <article className={`contact${activePage === 'contact' ? ' active' : ''}`} data-page="contact">
 
       <header>
-        <h2 className="h2 article-title">Contact</h2>
+        <h2 className="h2 article-title">Get in Touch</h2>
       </header>
 
-      <section className="mapbox" data-mapbox>
-        <figure>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-            width="400"
-            height="300"
-            loading="lazy"
-            title="Sacramento map"
-          ></iframe>
-        </figure>
+      <section className="contact-intro">
+        <h3 className="h3" style={{ marginBottom: '15px' }}>
+          Let's help your child build confidence in math.
+        </h3>
+        <p className="contact-intro-text">
+          Reach out to schedule a free trial session, ask about pricing, or check current
+          availability for your time zone.
+        </p>
       </section>
 
-      <section className="contact-form">
-        <h3 className="h3 form-title">Contact Form</h3>
-
-        <form
-          action="#"
-          className="form"
-          data-form
-          onSubmit={(e) => e.preventDefault()}
-        >
-          <div className="input-wrapper">
-            <input
-              type="text"
-              name="fullname"
-              className="form-input"
-              placeholder="Full name"
-              required
-              data-form-input
-              value={fullname}
-              onChange={(e) => setFullname(e.target.value)}
-            />
-            <input
-              type="email"
-              name="email"
-              className="form-input"
-              placeholder="Email address"
-              required
-              data-form-input
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-
-          <textarea
-            name="message"
-            className="form-input"
-            placeholder="Your Message"
-            required
-            data-form-input
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-          ></textarea>
-
-          <button
-            className="form-btn"
-            type="submit"
-            disabled={!isValid}
-            data-form-btn
-          >
-            <ion-icon name="paper-plane"></ion-icon>
-            <span>Send Message</span>
-          </button>
-        </form>
+      {/* CTA Buttons */}
+      <section className="contact-cta-section">
+        <ul className="contact-cta-grid">
+          <li>
+            <a href="mailto:kavitha@example.com" className="contact-cta-card">
+              <div className="contact-cta-icon">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+              <h4 className="h4 contact-cta-title">Email Me</h4>
+              <p className="contact-cta-text">kavitha@example.com</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/1234567890" className="contact-cta-card" target="_blank" rel="noopener noreferrer">
+              <div className="contact-cta-icon">
+                <ion-icon name="logo-whatsapp"></ion-icon>
+              </div>
+              <h4 className="h4 contact-cta-title">WhatsApp Me</h4>
+              <p className="contact-cta-text">+1 (234) 567-890</p>
+            </a>
+          </li>
+        </ul>
       </section>
+
+      {/* Availability info */}
+      <section className="availability-section">
+        <h3 className="h3" style={{ marginBottom: '15px' }}>Availability</h3>
+        <div className="content-card availability-card" style={{ paddingTop: '25px', cursor: 'default' }}>
+          <ul className="availability-list">
+            <li className="availability-item">
+              <div className="icon-box">
+                <ion-icon name="time-outline"></ion-icon>
+              </div>
+              <div>
+                <h5 className="h5">Time Zones</h5>
+                <p className="availability-text">EST · CST · PST — flexible scheduling</p>
+              </div>
+            </li>
+            <li className="availability-item">
+              <div className="icon-box">
+                <ion-icon name="calendar-outline"></ion-icon>
+              </div>
+              <div>
+                <h5 className="h5">Trial Session</h5>
+                <p className="availability-text">Free introductory session to assess fit &amp; goals</p>
+              </div>
+            </li>
+            <li className="availability-item">
+              <div className="icon-box">
+                <ion-icon name="laptop-outline"></ion-icon>
+              </div>
+              <div>
+                <h5 className="h5">100% Online</h5>
+                <p className="availability-text">All you need is a stable internet connection</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="site-footer">
+        <p>© 2026 Kavitha JR — Online Math Tutor. All rights reserved.</p>
+      </footer>
 
     </article>
   )
