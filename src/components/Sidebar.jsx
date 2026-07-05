@@ -14,7 +14,9 @@ function Sidebar() {
 
         <div className="info-content">
           <h1 className="name" title="Kavitha JR">Kavitha JR</h1>
-          <p className="title">Online Math Tutor</p>
+          <p className="title">
+            <span className="status-dot"></span> Online Math Tutor
+          </p>
         </div>
 
         <button
