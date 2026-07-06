@@ -6,8 +6,8 @@ function Home({ activePage, setActivePage }) {
         <h2 className="h2 article-title">Home</h2>
       </header>
 
+      {/* Hero Section */}
       <section className="hero-section">
-
         <div className="hero-badge">
           <ion-icon name="school-outline"></ion-icon>
           <span>Online Math Tutor · US &amp; Canada Curriculum</span>
@@ -19,8 +19,7 @@ function Home({ activePage, setActivePage }) {
         </h3>
 
         <p className="hero-text">
-          One-on-one online math tutoring with 11+ years of teaching experience — helping students
-          truly understand math, not just memorize it. Serving students across EST, CST, and PST time zones.
+          One-on-one online math tutoring with 11+ years of teaching experience — helping students truly understand math, not just memorize it. Serving students across EST, CST, and PST time zones.
         </p>
 
         <div className="hero-cta-wrapper">
@@ -37,58 +36,173 @@ function Home({ activePage, setActivePage }) {
           <button
             className="hero-cta-btn secondary"
             onClick={() => {
-              setActivePage('about')
-              window.scrollTo(0, 0)
+              document.getElementById('about-me')?.scrollIntoView({ behavior: 'smooth' });
             }}
           >
-            <ion-icon name="arrow-forward-outline"></ion-icon>
+            <ion-icon name="arrow-down-outline"></ion-icon>
             <span>Learn More</span>
           </button>
         </div>
-
       </section>
 
-      {/* Quick highlights */}
-      <section className="hero-highlights">
-        <ul className="highlights-grid">
-          <li className="highlight-card">
-            <div className="icon-box">
-              <ion-icon name="checkmark-done-outline"></ion-icon>
-            </div>
-            <div className="highlight-content">
-              <h4 className="h4 highlight-title">Conceptual Learning</h4>
-              <p className="highlight-text">Build real understanding, not rote memorization</p>
+      {/* About Me Section */}
+      <section id="about-me" style={{ marginTop: '50px' }}>
+        <header>
+          <h3 className="h3">About Me</h3>
+        </header>
+        <p className="about-text" style={{ marginTop: '15px' }}>
+          Hi, I'm Kavitha.<br /><br />
+          I'm a dedicated one-on-one online math tutor with over 11 years of teaching experience, including 4+ years specializing in the US and Canadian curricula. I focus on building strong conceptual foundations rather than rote learning — helping students gain real confidence and see measurable improvement in their grades and problem-solving skills.<br /><br />
+          My teaching is tailored to each student's pace and learning style, and I work closely with parents to track progress every step of the way.
+        </p>
+
+        <ul className="stats-list" style={{ marginTop: '30px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px' }}>
+          <li className="stat-card">
+            <h4 className="stat-number">11+</h4>
+            <p className="stat-text">Years Teaching Experience</p>
+          </li>
+          <li className="stat-card">
+            <h4 className="stat-number">4+</h4>
+            <p className="stat-text">Years — US &amp; Canada Curriculum</p>
+          </li>
+          <li className="stat-card">
+            <h4 className="stat-number">1:1</h4>
+            <p className="stat-text">Fully Online, Personalized Sessions</p>
+          </li>
+          <li className="stat-card">
+            <h4 className="stat-number" style={{ fontSize: '1.8rem' }}>EST · CST · PST</h4>
+            <p className="stat-text">Time Zones Served</p>
+          </li>
+        </ul>
+      </section>
+
+      {/* Services Section */}
+      <section style={{ marginTop: '50px' }}>
+        <header>
+          <h3 className="h3">Services</h3>
+          <p style={{ color: 'var(--light-gray)', marginTop: '5px' }}>How I can help</p>
+        </header>
+
+        <ul className="services-list" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', marginTop: '25px' }}>
+          <li className="service-item">
+            <div className="service-content-box">
+              <h4 className="h4 service-item-title">US Curriculum</h4>
+              <p className="service-item-text">Personalized math tutoring aligned with US grade-level standards, from foundational arithmetic through algebra and beyond.</p>
             </div>
           </li>
-          <li className="highlight-card">
-            <div className="icon-box">
-              <ion-icon name="trending-up-outline"></ion-icon>
-            </div>
-            <div className="highlight-content">
-              <h4 className="h4 highlight-title">Proven Results</h4>
-              <p className="highlight-text">Every student has shown measurable improvement</p>
+          <li className="service-item">
+            <div className="service-content-box">
+              <h4 className="h4 service-item-title">Canadian Curriculum</h4>
+              <p className="service-item-text">Support tailored to provincial math curricula, helping students stay confident and on track with their coursework.</p>
             </div>
           </li>
-          <li className="highlight-card">
-            <div className="icon-box">
-              <ion-icon name="people-outline"></ion-icon>
-            </div>
-            <div className="highlight-content">
-              <h4 className="h4 highlight-title">Parent Partnership</h4>
-              <p className="highlight-text">Regular check-ins and transparent progress tracking</p>
+          <li className="service-item">
+            <div className="service-content-box">
+              <h4 className="h4 service-item-title">One-on-One Sessions</h4>
+              <p className="service-item-text">Fully personalized attention — lessons move at your child's pace, with regular check-ins on progress.</p>
             </div>
           </li>
-          <li className="highlight-card">
-            <div className="icon-box">
-              <ion-icon name="time-outline"></ion-icon>
-            </div>
-            <div className="highlight-content">
-              <h4 className="h4 highlight-title">Flexible Scheduling</h4>
-              <p className="highlight-text">Convenient sessions across EST, CST &amp; PST zones</p>
+          <li className="service-item">
+            <div className="service-content-box">
+              <h4 className="h4 service-item-title">Fully Online</h4>
+              <p className="service-item-text">Convenient, flexible scheduling from anywhere — all you need is a stable internet connection.</p>
             </div>
           </li>
         </ul>
       </section>
+
+      {/* Track Record Section */}
+      <section style={{ marginTop: '50px' }}>
+        <header>
+          <h3 className="h3">Track Record</h3>
+          <p style={{ color: 'var(--light-gray)', marginTop: '5px' }}>Consistent, real improvement</p>
+        </header>
+        <p className="about-text" style={{ marginTop: '15px' }}>
+          Parents consistently describe the support here as proactive and attentive — regular check-ins, careful attention to each child's specific gaps, and steady communication along the way. The result: every student who has worked with me has shown measurable improvement, whether that's stronger grades, better test scores, or simply more confidence sitting down to do math homework.
+        </p>
+      </section>
+
+      {/* Auto Moving Feedbacks */}
+      <section style={{ marginTop: '50px', overflow: 'hidden' }}>
+        <header>
+          <h3 className="h3">What Parents &amp; Students Say</h3>
+          <p style={{ color: 'var(--light-gray)', marginTop: '5px' }}>Real feedback</p>
+        </header>
+        
+        <div className="marquee-wrapper" style={{ display: 'flex', overflow: 'hidden', marginTop: '25px', paddingBottom: '10px' }}>
+          <div className="marquee-content" style={{ display: 'flex', gap: '20px', animation: 'marquee 40s linear infinite', width: 'max-content' }}>
+            {/* 5 feedbacks */}
+            <div className="feedback-card">
+              <p>"Extremely proactive and genuinely cares about every student's progress. My child has improved so much since we started."</p>
+              <h5>— Parent, Grade 8</h5>
+            </div>
+            <div className="feedback-card">
+              <p>"Every session feels personal, not rushed. The results speak for themselves — my child's grades and confidence have both gone up."</p>
+              <h5>— Parent, Grade 10</h5>
+            </div>
+            <div className="feedback-card">
+              <p>"Kavitha explains concepts so clearly! My son used to hate math, but now he actually looks forward to his classes."</p>
+              <h5>— Parent, Grade 6</h5>
+            </div>
+            <div className="feedback-card">
+              <p>"The tailored approach for the Canadian curriculum was exactly what we needed. Highly recommended!"</p>
+              <h5>— Parent, Grade 9</h5>
+            </div>
+            <div className="feedback-card">
+              <p>"Flexible scheduling and excellent teaching. A lifesaver for busy parents and struggling students."</p>
+              <h5>— Parent, Grade 7</h5>
+            </div>
+            
+            {/* Duplicated 5 feedbacks for seamless infinite scroll */}
+            <div className="feedback-card">
+              <p>"Extremely proactive and genuinely cares about every student's progress. My child has improved so much since we started."</p>
+              <h5>— Parent, Grade 8</h5>
+            </div>
+            <div className="feedback-card">
+              <p>"Every session feels personal, not rushed. The results speak for themselves — my child's grades and confidence have both gone up."</p>
+              <h5>— Parent, Grade 10</h5>
+            </div>
+            <div className="feedback-card">
+              <p>"Kavitha explains concepts so clearly! My son used to hate math, but now he actually looks forward to his classes."</p>
+              <h5>— Parent, Grade 6</h5>
+            </div>
+            <div className="feedback-card">
+              <p>"The tailored approach for the Canadian curriculum was exactly what we needed. Highly recommended!"</p>
+              <h5>— Parent, Grade 9</h5>
+            </div>
+            <div className="feedback-card">
+              <p>"Flexible scheduling and excellent teaching. A lifesaver for busy parents and struggling students."</p>
+              <h5>— Parent, Grade 7</h5>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Get In Touch */}
+      <section className="contact-section" style={{ marginTop: '50px', background: 'var(--border-gradient-onyx)', padding: '30px', borderRadius: '14px', position: 'relative', zIndex: 1 }}>
+        <div style={{ content: '""', position: 'absolute', inset: '1px', background: 'var(--bg-gradient-jet)', borderRadius: 'inherit', zIndex: -1 }}></div>
+        <header>
+          <h3 className="h3">Get in Touch</h3>
+          <p style={{ color: 'var(--light-gray)', marginTop: '5px' }}>Let's help your child build confidence in math.</p>
+        </header>
+        <p className="about-text" style={{ marginTop: '15px' }}>
+          Reach out to schedule a free trial session, ask about pricing, or check current availability for your time zone.
+        </p>
+        <div style={{ display: 'flex', gap: '15px', marginTop: '25px', flexWrap: 'wrap' }}>
+          <a href="mailto:kavitha@example.com" className="hero-cta-btn primary" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <ion-icon name="mail-outline"></ion-icon>
+            <span>Email Me</span>
+          </a>
+          <a href="https://wa.me/1234567890" className="hero-cta-btn secondary" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <ion-icon name="logo-whatsapp"></ion-icon>
+            <span>WhatsApp Me</span>
+          </a>
+        </div>
+      </section>
+
+      <footer style={{ marginTop: '60px', textAlign: 'center', color: 'var(--light-gray)', fontSize: 'var(--fs-8)', paddingBottom: '30px' }}>
+        © 2026 Kavitha JR — Online Math Tutor. All rights reserved.
+      </footer>
 
     </article>
   )
