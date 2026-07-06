@@ -211,6 +211,24 @@ function Home({ activePage, setActivePage }) {
             <span>WhatsApp Me</span>
           </a>
         </div>
+        
+        <ul className="social-list" style={{ justifyContent: 'center', marginTop: '30px' }}>
+          <li className="social-item">
+            <a href="#" className="social-link" style={{ fontSize: '1.5rem' }}>
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </li>
+          <li className="social-item">
+            <a href="#" className="social-link" style={{ fontSize: '1.5rem' }}>
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li className="social-item">
+            <a href="#" className="social-link" style={{ fontSize: '1.5rem' }}>
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+        </ul>
       </section>
 
       <footer style={{ marginTop: '60px', textAlign: 'center', color: 'var(--light-gray)', fontSize: 'var(--fs-8)', paddingBottom: '30px' }}>

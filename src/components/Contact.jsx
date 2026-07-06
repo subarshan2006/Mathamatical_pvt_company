@@ -73,6 +73,24 @@ function Contact({ activePage }) {
               </div>
             </li>
           </ul>
+          
+          <ul className="social-list" style={{ justifyContent: 'center', marginTop: '30px' }}>
+            <li className="social-item">
+              <a href="#" className="social-link" style={{ fontSize: '1.5rem' }}>
+                <ion-icon name="logo-whatsapp"></ion-icon>
+              </a>
+            </li>
+            <li className="social-item">
+              <a href="#" className="social-link" style={{ fontSize: '1.5rem' }}>
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+            <li className="social-item">
+              <a href="#" className="social-link" style={{ fontSize: '1.5rem' }}>
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
 

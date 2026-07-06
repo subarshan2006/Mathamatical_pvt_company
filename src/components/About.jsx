@@ -147,6 +147,24 @@ function About({ activePage, setActivePage }) {
             <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
             <span>Get in Touch</span>
           </button>
+          
+          <ul className="social-list" style={{ justifyContent: 'center', marginTop: '30px' }}>
+            <li className="social-item">
+              <a href="#" className="social-link" style={{ fontSize: '1.5rem' }}>
+                <ion-icon name="logo-whatsapp"></ion-icon>
+              </a>
+            </li>
+            <li className="social-item">
+              <a href="#" className="social-link" style={{ fontSize: '1.5rem' }}>
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+            <li className="social-item">
+              <a href="#" className="social-link" style={{ fontSize: '1.5rem' }}>
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
 
