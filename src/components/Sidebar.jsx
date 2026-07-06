@@ -52,7 +52,7 @@ function Sidebar() {
             </div>
             <div className="contact-info">
               <p className="contact-title">WhatsApp</p>
-              <a href="https://wa.me/1234567890" className="contact-link">+1 (234) 567-890</a>
+              <a href="https://wa.me/918610933559" className="contact-link">+91 86109 33559</a>
             </div>
           </li>
 
@@ -87,7 +87,7 @@ function Sidebar() {
             </a>
           </li>
           <li className="social-item">
-            <a href="https://wa.me/1234567890" className="social-link" title="WhatsApp">
+            <a href="https://wa.me/918610933559" className="social-link" title="WhatsApp">
               <ion-icon name="logo-whatsapp"></ion-icon>
             </a>
           </li>

@@ -29,7 +29,7 @@ function Contact({ activePage }) {
             </a>
           </li>
           <li>
-            <a href="https://wa.me/1234567890" className="contact-cta-card" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/918610933559" className="contact-cta-card" target="_blank" rel="noopener noreferrer">
               <div className="contact-cta-icon">
                 <ion-icon name="logo-whatsapp"></ion-icon>
               </div>
@@ -76,7 +76,7 @@ function Contact({ activePage }) {
           
           <ul className="social-list" style={{ justifyContent: 'center', marginTop: '30px' }}>
             <li className="social-item">
-              <a href="#" className="social-link" style={{ fontSize: '1.5rem' }}>
+              <a href="https://wa.me/918610933559" className="social-link" style={{ fontSize: '1.5rem' }}>
                 <ion-icon name="logo-whatsapp"></ion-icon>
               </a>
             </li>
