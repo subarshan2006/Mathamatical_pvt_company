@@ -45,15 +45,16 @@ function Home({ activePage, setActivePage }) {
         </div>
       </section>
 
+      {/* Divider */}
+      <hr style={{ border: 'none', borderTop: '1px solid var(--jet)', margin: '50px 0' }} />
+
       {/* About Me Section */}
-      <section id="about-me" style={{ marginTop: '50px' }}>
+      <section id="about-me">
         <header>
           <h3 className="h3">About Me</h3>
         </header>
         <p className="about-text" style={{ marginTop: '15px' }}>
-          Hi, I'm Kavitha.<br /><br />
-          I'm a dedicated one-on-one online math tutor with over 11 years of teaching experience, including 4+ years specializing in the US and Canadian curricula. I focus on building strong conceptual foundations rather than rote learning — helping students gain real confidence and see measurable improvement in their grades and problem-solving skills.<br /><br />
-          My teaching is tailored to each student's pace and learning style, and I work closely with parents to track progress every step of the way.
+          I am a dedicated online math tutor with 11+ years of experience, specializing in the US and Canadian curricula. I focus on building strong conceptual foundations rather than rote memorization. My tailored one-on-one approach ensures every student learns at their own pace, helping them gain real confidence, problem-solving skills, and measurable improvements in their grades.
         </p>
 
         <ul className="stats-list" style={{ marginTop: '30px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px' }}>
@@ -76,8 +77,11 @@ function Home({ activePage, setActivePage }) {
         </ul>
       </section>
 
+      {/* Divider */}
+      <hr style={{ border: 'none', borderTop: '1px solid var(--jet)', margin: '50px 0' }} />
+
       {/* Services Section */}
-      <section style={{ marginTop: '50px' }}>
+      <section>
         <header>
           <h3 className="h3">Services</h3>
           <p style={{ color: 'var(--light-gray)', marginTop: '5px' }}>How I can help</p>
@@ -111,8 +115,11 @@ function Home({ activePage, setActivePage }) {
         </ul>
       </section>
 
+      {/* Divider */}
+      <hr style={{ border: 'none', borderTop: '1px solid var(--jet)', margin: '50px 0' }} />
+
       {/* Track Record Section */}
-      <section style={{ marginTop: '50px' }}>
+      <section>
         <header>
           <h3 className="h3">Track Record</h3>
           <p style={{ color: 'var(--light-gray)', marginTop: '5px' }}>Consistent, real improvement</p>
@@ -122,8 +129,11 @@ function Home({ activePage, setActivePage }) {
         </p>
       </section>
 
+      {/* Divider */}
+      <hr style={{ border: 'none', borderTop: '1px solid var(--jet)', margin: '50px 0' }} />
+
       {/* Auto Moving Feedbacks */}
-      <section style={{ marginTop: '50px', overflow: 'hidden' }}>
+      <section style={{ overflow: 'hidden' }}>
         <header>
           <h3 className="h3">What Parents &amp; Students Say</h3>
           <p style={{ color: 'var(--light-gray)', marginTop: '5px' }}>Real feedback</p>
@@ -178,8 +188,11 @@ function Home({ activePage, setActivePage }) {
         </div>
       </section>
 
+      {/* Divider */}
+      <hr style={{ border: 'none', borderTop: '1px solid var(--jet)', margin: '50px 0' }} />
+
       {/* Get In Touch */}
-      <section className="contact-section" style={{ marginTop: '50px', background: 'var(--border-gradient-onyx)', padding: '30px', borderRadius: '14px', position: 'relative', zIndex: 1 }}>
+      <section className="contact-section" style={{ background: 'var(--border-gradient-onyx)', padding: '30px', borderRadius: '14px', position: 'relative', zIndex: 1 }}>
         <div style={{ content: '""', position: 'absolute', inset: '1px', background: 'var(--bg-gradient-jet)', borderRadius: 'inherit', zIndex: -1 }}></div>
         <header>
           <h3 className="h3">Get in Touch</h3>
