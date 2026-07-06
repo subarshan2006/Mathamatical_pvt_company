@@ -77,10 +77,12 @@ function Services({ activePage, setActivePage }) {
               <ion-icon name="alarm-outline" style={{ fontSize: '32px', color: 'var(--orange-yellow-crayola)' }}></ion-icon>
             </div>
             <div className="service-content-box">
-              <h4 className="h4 service-item-title">
-                Exam Revision Sessions
-                <span className="addon-badge">Add-On</span>
-              </h4>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '7px' }}>
+                <h4 className="h4 service-item-title" style={{ marginBottom: 0 }}>
+                  Exam Revision Sessions
+                </h4>
+                <div className="addon-badge">Add-On</div>
+              </div>
               <p className="service-item-text">
                 Early morning sessions before a test to revise key topics and clear last-minute
                 doubts — booked separately, as needed.
