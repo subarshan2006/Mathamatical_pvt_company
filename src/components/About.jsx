@@ -56,31 +56,75 @@ function About({ activePage, setActivePage }) {
       </p>
 
       {/* My Story */}
-      <section className="about-text" style={{ marginBottom: '40px' }}>
-        <h3 className="h3" style={{ marginBottom: '15px' }}>My Story</h3>
-        <p>
-          I've spent over 11 years teaching mathematics — starting in the classroom and later moving into fully online, one-on-one tutoring. Along the way, I've taught students following the US and Canadian curricula, as well as international frameworks, giving me a broad perspective on how math is taught differently around the world — and, more importantly, how students actually learn it.
-        </p>
-        <p>
-          What hasn't changed over the years is my belief that every student can succeed in math when the explanation finally clicks. My job isn't to rush through topics — it's to slow down wherever needed until real understanding takes hold.
-        </p>
+      <section className="about-story" style={{ marginBottom: '60px' }}>
+        <div className="title-wrapper" style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '25px' }}>
+          <div className="icon-box" style={{ color: 'var(--orange-yellow-crayola)', fontSize: '2rem' }}>
+            <ion-icon name="book-outline"></ion-icon>
+          </div>
+          <h3 className="h3" style={{ marginBottom: 0 }}>My Story</h3>
+        </div>
+        
+        <div className="service-item" style={{ padding: '30px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          <p className="about-text" style={{ fontSize: '1.05rem', lineHeight: '1.7' }}>
+            I've spent over 11 years teaching mathematics — starting in the classroom and later moving into fully online, one-on-one tutoring. Along the way, I've taught students following the US and Canadian curricula, as well as international frameworks, giving me a broad perspective on how math is taught differently around the world — and, more importantly, how students actually learn it.
+          </p>
+          <div style={{ display: 'flex', gap: '15px', alignItems: 'flex-start', background: 'hsla(0, 0%, 100%, 0.04)', padding: '20px', borderRadius: '12px', borderLeft: '4px solid var(--orange-yellow-crayola)' }}>
+            <ion-icon name="bulb-outline" style={{ fontSize: '2.5rem', color: 'var(--orange-yellow-crayola)' }}></ion-icon>
+            <p className="about-text" style={{ fontSize: '1rem', fontStyle: 'italic', color: 'var(--white-2)' }}>
+              What hasn't changed over the years is my belief that every student can succeed in math when the explanation finally clicks. My job isn't to rush through topics — it's to slow down wherever needed until real understanding takes hold.
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* My Teaching Philosophy */}
-      <section className="about-text" style={{ marginBottom: '40px' }}>
-        <h3 className="h3" style={{ marginBottom: '15px' }}>My Teaching Philosophy</h3>
-        <p>
-          My approach is a little different — I rarely give students the answer directly. Instead, I ask guiding questions and offer small clues, letting them work their way to the answer themselves. It takes a bit more patience, but the payoff is real: students build genuine confidence, because they know the understanding is theirs, not something handed to them.
-        </p>
-        <p>
-          I also put a lot of care into creating a relaxed, pressure-free environment from the very first session. Students feel comfortable asking questions and making mistakes without hesitation — this comfort is often what unlocks real progress, especially for students who have felt discouraged by math in the past.
-        </p>
-        <p>
-          I want every student to walk away believing that math is simple and manageable — not something to fear, and not something their past grades have to define. Combined with consistent practice and a good amount of patience, this approach is what helps students stay motivated and genuinely engaged with their work, rather than dreading it.
-        </p>
-        <p>
-          When students understand the "why" behind a method, they're able to handle new problems confidently — not just repeat what they've memorized. I also stay in regular contact with parents, so progress is always visible and there are no surprises.
-        </p>
+      <section className="about-philosophy" style={{ marginBottom: '60px' }}>
+        <div className="title-wrapper" style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '25px' }}>
+          <div className="icon-box" style={{ color: 'var(--orange-yellow-crayola)', fontSize: '2rem' }}>
+            <ion-icon name="extension-puzzle-outline"></ion-icon>
+          </div>
+          <h3 className="h3" style={{ marginBottom: 0 }}>My Teaching Philosophy</h3>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
+          
+          <div className="service-item" style={{ padding: '25px', display: 'flex', flexDirection: 'column', gap: '15px' }}>
+            <div className="icon-box" style={{ width: '45px', height: '45px', borderRadius: '12px', background: 'hsla(38, 90%, 45%, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--orange-yellow-crayola)' }}>
+              <ion-icon name="help-buoy-outline" style={{ fontSize: '1.5rem' }}></ion-icon>
+            </div>
+            <p className="about-text">
+              My approach is a little different — I rarely give students the answer directly. Instead, I ask guiding questions and offer small clues, letting them work their way to the answer themselves. It takes a bit more patience, but the payoff is real: students build genuine confidence, because they know the understanding is theirs, not something handed to them.
+            </p>
+          </div>
+
+          <div className="service-item" style={{ padding: '25px', display: 'flex', flexDirection: 'column', gap: '15px' }}>
+            <div className="icon-box" style={{ width: '45px', height: '45px', borderRadius: '12px', background: 'hsla(38, 90%, 45%, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--orange-yellow-crayola)' }}>
+              <ion-icon name="leaf-outline" style={{ fontSize: '1.5rem' }}></ion-icon>
+            </div>
+            <p className="about-text">
+              I also put a lot of care into creating a relaxed, pressure-free environment from the very first session. Students feel comfortable asking questions and making mistakes without hesitation — this comfort is often what unlocks real progress, especially for students who have felt discouraged by math in the past.
+            </p>
+          </div>
+
+          <div className="service-item" style={{ padding: '25px', display: 'flex', flexDirection: 'column', gap: '15px' }}>
+            <div className="icon-box" style={{ width: '45px', height: '45px', borderRadius: '12px', background: 'hsla(38, 90%, 45%, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--orange-yellow-crayola)' }}>
+              <ion-icon name="rocket-outline" style={{ fontSize: '1.5rem' }}></ion-icon>
+            </div>
+            <p className="about-text">
+              I want every student to walk away believing that math is simple and manageable — not something to fear, and not something their past grades have to define. Combined with consistent practice and a good amount of patience, this approach is what helps students stay motivated and genuinely engaged with their work, rather than dreading it.
+            </p>
+          </div>
+
+          <div className="service-item" style={{ padding: '25px', display: 'flex', flexDirection: 'column', gap: '15px' }}>
+            <div className="icon-box" style={{ width: '45px', height: '45px', borderRadius: '12px', background: 'hsla(38, 90%, 45%, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--orange-yellow-crayola)' }}>
+              <ion-icon name="chatbubbles-outline" style={{ fontSize: '1.5rem' }}></ion-icon>
+            </div>
+            <p className="about-text">
+              When students understand the "why" behind a method, they're able to handle new problems confidently — not just repeat what they've memorized. I also stay in regular contact with parents, so progress is always visible and there are no surprises.
+            </p>
+          </div>
+
+        </div>
       </section>
 
       {/* Experience Timeline */}
