@@ -1959,6 +1959,25 @@ textarea.form-input::-webkit-resizer { display: none; }
   margin-bottom: 20px;
 }
 
+@media (max-width: 767px) {
+  .home .article-title {
+    text-align: center;
+  }
+  
+  .home .article-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .hero-title {
+    text-align: center;
+  }
+
+  .home section header {
+    text-align: center;
+  }
+}
+
 .hero-highlight {
   background: var(--text-gradient-yellow);
   -webkit-background-clip: text;
