@@ -122,7 +122,7 @@ function Services({ activePage, setActivePage }) {
                     <span>Platform</span>
                   </div>
                 </td>
-                <td>Zoom / Google Meet (whichever works best for you)</td>
+                <td>Zoom / Google Meet / Teams (whichever works best for you)</td>
               </tr>
               <tr>
                 <td>
