@@ -31,7 +31,7 @@ function Home({ activePage, setActivePage }) {
             }}
           >
             <ion-icon name="calendar-outline"></ion-icon>
-            <span>Book a Free Trial Session</span>
+            <span>Book a Trial Session</span>
           </button>
           <button
             className="hero-cta-btn secondary"

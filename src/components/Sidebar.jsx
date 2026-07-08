@@ -9,7 +9,7 @@ function Sidebar() {
       <div className="sidebar-info">
 
         <figure className="avatar-box">
-          <img src={`${import.meta.env.BASE_URL}assets/images/my-avatar.png`} alt="Kavitha JR" width="80" />
+          <img src={`${import.meta.env.BASE_URL}assets/images/avatar-3.png`} alt="Kavitha JR" width="80" />
         </figure>
 
         <div className="info-content">

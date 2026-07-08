@@ -11,7 +11,7 @@ function Contact({ activePage }) {
           Let's help your child build confidence in math.
         </h3>
         <p className="contact-intro-text">
-          Reach out to schedule a free trial session, ask about pricing, or check current
+          Reach out to schedule a trial session, ask about pricing, or check current
           availability for your time zone.
         </p>
       </section>
@@ -34,7 +34,7 @@ function Contact({ activePage }) {
                 <ion-icon name="logo-whatsapp"></ion-icon>
               </div>
               <h4 className="h4 contact-cta-title">WhatsApp Me</h4>
-              <p className="contact-cta-text">+1 (234) 567-890</p>
+              <p className="contact-cta-text">+91 86109 33559</p>
             </a>
           </li>
         </ul>
@@ -60,7 +60,7 @@ function Contact({ activePage }) {
               </div>
               <div>
                 <h5 className="h5">Trial Session</h5>
-                <p className="availability-text">Free introductory session to assess fit &amp; goals</p>
+                <p className="availability-text">Introductory session to assess fit &amp; goals</p>
               </div>
             </li>
             <li className="availability-item">
