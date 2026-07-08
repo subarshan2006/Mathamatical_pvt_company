@@ -81,7 +81,6 @@ function Services({ activePage, setActivePage }) {
                 <h4 className="h4 service-item-title" style={{ marginBottom: 0 }}>
                   Exam Revision Sessions
                 </h4>
-                <div className="addon-badge">Add-On</div>
               </div>
               <p className="service-item-text">
                 Early morning sessions before a test to revise key topics and clear last-minute
