@@ -144,45 +144,45 @@ function Home({ activePage, setActivePage }) {
             {/* 5 feedbacks */}
             <div className="feedback-card">
               <p>"Extremely proactive and genuinely cares about every student's progress. My child has improved so much since we started."</p>
-              <h5>— Parent, Grade 8</h5>
+              <h5>— Parent</h5>
             </div>
             <div className="feedback-card">
               <p>"Every session feels personal, not rushed. The results speak for themselves — my child's grades and confidence have both gone up."</p>
-              <h5>— Parent, Grade 10</h5>
+              <h5>— Parent</h5>
             </div>
             <div className="feedback-card">
               <p>"Kavitha explains concepts so clearly! My son used to hate math, but now he actually looks forward to his classes."</p>
-              <h5>— Parent, Grade 6</h5>
+              <h5>— Parent</h5>
             </div>
             <div className="feedback-card">
               <p>"The tailored approach for the Canadian curriculum was exactly what we needed. Highly recommended!"</p>
-              <h5>— Parent, Grade 9</h5>
+              <h5>— Parent</h5>
             </div>
             <div className="feedback-card">
               <p>"Flexible scheduling and excellent teaching. A lifesaver for busy parents and struggling students."</p>
-              <h5>— Parent, Grade 7</h5>
+              <h5>— Parent</h5>
             </div>
             
             {/* Duplicated 5 feedbacks for seamless infinite scroll */}
             <div className="feedback-card">
               <p>"Extremely proactive and genuinely cares about every student's progress. My child has improved so much since we started."</p>
-              <h5>— Parent, Grade 8</h5>
+              <h5>— Parent</h5>
             </div>
             <div className="feedback-card">
               <p>"Every session feels personal, not rushed. The results speak for themselves — my child's grades and confidence have both gone up."</p>
-              <h5>— Parent, Grade 10</h5>
+              <h5>— Parent</h5>
             </div>
             <div className="feedback-card">
               <p>"Kavitha explains concepts so clearly! My son used to hate math, but now he actually looks forward to his classes."</p>
-              <h5>— Parent, Grade 6</h5>
+              <h5>— Parent</h5>
             </div>
             <div className="feedback-card">
               <p>"The tailored approach for the Canadian curriculum was exactly what we needed. Highly recommended!"</p>
-              <h5>— Parent, Grade 9</h5>
+              <h5>— Parent</h5>
             </div>
             <div className="feedback-card">
               <p>"Flexible scheduling and excellent teaching. A lifesaver for busy parents and struggling students."</p>
-              <h5>— Parent, Grade 7</h5>
+              <h5>— Parent</h5>
             </div>
           </div>
         </div>
