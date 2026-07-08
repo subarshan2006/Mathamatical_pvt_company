@@ -42,7 +42,7 @@ function Sidebar() {
             </div>
             <div className="contact-info">
               <p className="contact-title">Email</p>
-              <a href="mailto:kavitha@example.com" className="contact-link">kavitha@example.com</a>
+              <a href="mailto:kavithatipsk@gmail.com" className="contact-link">kavithatipsk@gmail.com</a>
             </div>
           </li>
 
@@ -82,7 +82,7 @@ function Sidebar() {
 
         <ul className="social-list">
           <li className="social-item">
-            <a href="mailto:kavitha@example.com" className="social-link" title="Email">
+            <a href="mailto:kavithatipsk@gmail.com" className="social-link" title="Email">
               <ion-icon name="mail-outline"></ion-icon>
             </a>
           </li>

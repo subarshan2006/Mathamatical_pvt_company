@@ -20,12 +20,12 @@ function Contact({ activePage }) {
       <section className="contact-cta-section">
         <ul className="contact-cta-grid">
           <li>
-            <a href="mailto:kavitha@example.com" className="contact-cta-card">
+            <a href="mailto:kavithatipsk@gmail.com" className="contact-cta-card">
               <div className="contact-cta-icon">
                 <ion-icon name="mail-outline"></ion-icon>
               </div>
               <h4 className="h4 contact-cta-title">Email Me</h4>
-              <p className="contact-cta-text">kavitha@example.com</p>
+              <p className="contact-cta-text">kavithatipsk@gmail.com</p>
             </a>
           </li>
           <li>

@@ -202,7 +202,7 @@ function Home({ activePage, setActivePage }) {
           Reach out to schedule a free trial session, ask about pricing, or check current availability for your time zone.
         </p>
         <div style={{ display: 'flex', gap: '15px', marginTop: '25px', flexWrap: 'wrap' }}>
-          <a href="mailto:kavitha@example.com" className="hero-cta-btn primary" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <a href="mailto:kavithatipsk@gmail.com" className="hero-cta-btn primary" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px' }}>
             <ion-icon name="mail-outline"></ion-icon>
             <span>Email Me</span>
           </a>
