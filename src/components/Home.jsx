@@ -1,4 +1,62 @@
+import { useState, useCallback, useRef, useEffect } from 'react'
+
+const feedbacks = [
+  {
+    text: "Kavitha has been teaching my daughter for the past 2 years. She is one of the best teachers I have seen. She is highly knowledgeable in her subjects and teaches kids as per the students level of understanding with lots of patience and kindness. My daughter improves a lot in Maths and now it has become her favorite subject due to Kavitha mam's teaching and guidance. She is a punctual person who values time and keeps the students very attentive in her class. We highly recommend her if you need the best Math Tutor for kids.",
+    author: "— Maha (Canada)"
+  },
+  {
+    text: "Mrs Kavitha has been teaching my 2 children for 3 years.We experienced great improvement in their Mathematics.Their scores improved significantly and they were able to be the top in their class ,especially Mathematics.Kavitha follows the same syllabus they have in their school.She is so helpful,patient,and always available when we needed help.Kavitha always make sure the topic is completely understood by the kids.My kids also love her and feel so comfortable with Kavitha.I highly recommend Kavitha for everyone who is looking for excellent Math teachers.Thank You.",
+    author: "Jeen Philip(Canada)"
+  },
+  {
+    text: "Every session feels personal, not rushed. The results speak for themselves — my child's grades and confidence have both gone up.",
+    author: "— Parent"
+  },
+  {
+    text: "Kavitha explains concepts so clearly! My son used to hate math, but now he actually looks forward to his classes.",
+    author: "— Parent"
+  },
+  {
+    text: "The tailored approach for the Canadian curriculum was exactly what we needed. Highly recommended!",
+    author: "— Parent"
+  },
+  {
+    text: "Flexible scheduling and excellent teaching. A lifesaver for busy parents and struggling students.",
+    author: "— Parent"
+  }
+]
+
 function Home({ activePage, setActivePage }) {
+  const [expanded, setExpanded] = useState({})
+  const [overflow, setOverflow] = useState({})
+  const marqueeRef = useRef(null)
+  const textRefs = useRef([])
+
+  useEffect(() => {
+    textRefs.current.forEach((el, i) => {
+      if (el) {
+        setOverflow(prev => ({ ...prev, [i]: el.scrollHeight > el.clientHeight }))
+      }
+    })
+  }, [])
+
+  const toggleExpand = useCallback((index) => {
+    setExpanded(prev => {
+      const next = { ...prev }
+      if (next[index]) {
+        delete next[index]
+      } else {
+        next[index] = true
+      }
+      const anyExpanded = Object.keys(next).length > 0
+      if (marqueeRef.current) {
+        marqueeRef.current.style.animationPlayState = anyExpanded ? 'paused' : 'running'
+      }
+      return next
+    })
+  }, [])
+
   return (
     <article className={`home${activePage === 'home' ? ' active' : ''}`} data-page="home">
 
@@ -140,50 +198,24 @@ function Home({ activePage, setActivePage }) {
         </header>
         
         <div className="marquee-wrapper" style={{ display: 'flex', overflow: 'hidden', marginTop: '25px', paddingBottom: '10px' }}>
-          <div className="marquee-content" style={{ display: 'flex', gap: '20px', animation: 'marquee 40s linear infinite', width: 'max-content' }}>
-            {/* 5 feedbacks */}
-            <div className="feedback-card">
-              <p>"Extremely proactive and genuinely cares about every student's progress. My child has improved so much since we started."</p>
-              <h5>— Parent</h5>
-            </div>
-            <div className="feedback-card">
-              <p>"Every session feels personal, not rushed. The results speak for themselves — my child's grades and confidence have both gone up."</p>
-              <h5>— Parent</h5>
-            </div>
-            <div className="feedback-card">
-              <p>"Kavitha explains concepts so clearly! My son used to hate math, but now he actually looks forward to his classes."</p>
-              <h5>— Parent</h5>
-            </div>
-            <div className="feedback-card">
-              <p>"The tailored approach for the Canadian curriculum was exactly what we needed. Highly recommended!"</p>
-              <h5>— Parent</h5>
-            </div>
-            <div className="feedback-card">
-              <p>"Flexible scheduling and excellent teaching. A lifesaver for busy parents and struggling students."</p>
-              <h5>— Parent</h5>
-            </div>
-            
-            {/* Duplicated 5 feedbacks for seamless infinite scroll */}
-            <div className="feedback-card">
-              <p>"Extremely proactive and genuinely cares about every student's progress. My child has improved so much since we started."</p>
-              <h5>— Parent</h5>
-            </div>
-            <div className="feedback-card">
-              <p>"Every session feels personal, not rushed. The results speak for themselves — my child's grades and confidence have both gone up."</p>
-              <h5>— Parent</h5>
-            </div>
-            <div className="feedback-card">
-              <p>"Kavitha explains concepts so clearly! My son used to hate math, but now he actually looks forward to his classes."</p>
-              <h5>— Parent</h5>
-            </div>
-            <div className="feedback-card">
-              <p>"The tailored approach for the Canadian curriculum was exactly what we needed. Highly recommended!"</p>
-              <h5>— Parent</h5>
-            </div>
-            <div className="feedback-card">
-              <p>"Flexible scheduling and excellent teaching. A lifesaver for busy parents and struggling students."</p>
-              <h5>— Parent</h5>
-            </div>
+          <div className="marquee-content" ref={marqueeRef} style={{ display: 'flex', gap: '20px', animation: 'marquee 40s linear infinite', width: 'max-content' }}>
+            {[...feedbacks, ...feedbacks].map((fb, i) => (
+              <div key={i} className={`feedback-card${expanded[i] ? ' expanded' : ''}`}>
+                <div className="feedback-text-wrapper" ref={el => textRefs.current[i] = el}>
+                  <p>"{fb.text}"</p>
+                  {!expanded[i] && overflow[i] && <div className="feedback-fade" />}
+                </div>
+                <div className="feedback-footer">
+                  <h5>{fb.author}</h5>
+                  {overflow[i] && (
+                    <button className="feedback-toggle" onClick={() => toggleExpand(i)}>
+                      <ion-icon name={expanded[i] ? 'chevron-up-outline' : 'chevron-down-outline'}></ion-icon>
+                      <span>{expanded[i] ? 'Close' : 'View all'}</span>
+                    </button>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
