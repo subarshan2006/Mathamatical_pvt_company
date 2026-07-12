@@ -4,7 +4,7 @@
 
 export const students = [
   {
-    name: 'Test Student',
+    name: 'test-student',
     slug: 'test-student',
     docId: '2PACX-1vTurOk-K2lk2x3ejMiUP6dik5eGR6bO7tnWUFFZjqCAxnNSBjNHBgzpSNTli8un1JWRTrp0gOM70Dg-'
   },
