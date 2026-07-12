@@ -67,6 +67,21 @@ function Home({ activePage, setActivePage }) {
           <span>Online Math Tutor · US &amp; Canada Curriculum | Available Globally</span>
         </div>
 
+        <div className="curriculum-flags">
+          <div className="curriculum-flag" title="US Curriculum">
+            <span className="flag-emoji">🇺🇸</span>
+          </div>
+          <div className="curriculum-flag" title="UK Curriculum">
+            <span className="flag-emoji">🇬🇧</span>
+          </div>
+          <div className="curriculum-flag" title="Canadian Curriculum">
+            <span className="flag-emoji">🇨🇦</span>
+          </div>
+          <div className="curriculum-flag" title="International Baccalaureate">
+            <span className="flag-emoji">🌐</span>
+          </div>
+        </div>
+
         <h3 className="hero-title">
           Building confidence,<br />
           <span className="hero-highlight">one concept at a time.</span>
