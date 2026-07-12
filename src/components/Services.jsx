@@ -89,17 +89,19 @@ function Services({ activePage, setActivePage }) {
             </div>
           </li>
 
-          <li className="service-item" style={{ cursor: 'default' }}>
+           <li className="service-item">
             <div className="service-icon-box">
-              <ion-icon name="shield-checkmark-outline" style={{ fontSize: '32px', color: 'var(--orange-yellow-crayola)' }}></ion-icon>
+              <ion-icon name="bulb-outline" style={{ fontSize: '32px', color: 'var(--orange-yellow-crayola)' }}></ion-icon>
             </div>
             <div className="service-content-box">
               <h4 className="h4 service-item-title">No Advanced Payment</h4>
-              <blockquote className="services-quote" >
-                <p>"Trust is gained when actions meet words." — Chris Butler</p>
-              </blockquote>
+              <p className="service-item-text">
+                "Trust is gained when actions meet words." - Chris Butler Our no-advance payment policy bestows priority on classes rather than payments. Make the payment at the end of the month just for. the sessions attended. No admission fee! No pre-cancellation fee! No post-cancellation fee!
+              </p>
             </div>
           </li>
+
+         
 
         </ul>
       </section>

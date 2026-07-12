@@ -10,21 +10,13 @@ const feedbacks = [
     author: "Jeen Philip(Canada)"
   },
   {
-    text: "Every session feels personal, not rushed. The results speak for themselves — my child's grades and confidence have both gone up.",
-    author: "— Parent"
+    text: "Thank you for making math fun and enjoyable! We've seen so much growth in our child's confidence and love for learning. We truly appreciate your patience, kindness, and dedication. Highly recommended!.",
+    author: "Joshna (Ontario)"
   },
   {
-    text: "Kavitha explains concepts so clearly! My son used to hate math, but now he actually looks forward to his classes.",
-    author: "— Parent"
-  },
-  {
-    text: "The tailored approach for the Canadian curriculum was exactly what we needed. Highly recommended!",
-    author: "— Parent"
-  },
-  {
-    text: "Flexible scheduling and excellent teaching. A lifesaver for busy parents and struggling students.",
-    author: "— Parent"
-  }
+    text: "Kavitha is an excellent Math teacher. She is patient, professional, and very knowledgeable. She makes sure my son understands every concept clearly by giving regular homework and revision exercises. Her teaching method has helped improve his confidence and interest in Math. My son always looks forward to her classes. I highly recommend Kavitha to anyone looking for a dedicated and caring Math tutor.",
+    author: "Mahe (Ontario)"
+}
 ]
 
 function Home({ activePage, setActivePage }) {
@@ -172,6 +164,17 @@ function Home({ activePage, setActivePage }) {
             <div className="service-content-box">
               <h4 className="h4 service-item-title">Fully Online</h4>
               <p className="service-item-text">Convenient, flexible scheduling from anywhere — all you need is a stable internet connection.</p>
+            </div>
+          </li>
+          <li className="service-item no-advance-payment-card">
+            <div className="service-content-box">
+              <h4 className="h4 service-item-title">No Advanced Payment</h4>
+              <p className="service-item-text" style={{ fontStyle: 'italic', marginBottom: '10px' }}>
+                "Trust is gained when actions meet words." — Chris Butler
+              </p>
+              <p className="service-item-text" style={{ marginBottom: '14px' }}>
+                Our no-advance payment policy bestows priority on classes rather than payments. Make the payment at the end of the month just for the sessions attended.
+              </p>
             </div>
           </li>
         </ul>
