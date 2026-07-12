@@ -1,6 +1,10 @@
+import { Link, useNavigate } from 'react-router-dom'
+
 const pages = ['Home', 'About', 'Services', 'Contact']
 
 function Navbar({ activePage, setActivePage }) {
+  const navigate = useNavigate()
+
   return (
     <nav className="navbar">
       <ul className="navbar-list">
@@ -10,7 +14,7 @@ function Navbar({ activePage, setActivePage }) {
               className={`navbar-link${activePage === page.toLowerCase() ? ' active' : ''}`}
               data-nav-link
               onClick={() => {
-                setActivePage(page.toLowerCase())
+                navigate('/', { state: { activePage: page.toLowerCase() } })
                 window.scrollTo(0, 0)
               }}
             >
@@ -18,6 +22,15 @@ function Navbar({ activePage, setActivePage }) {
             </button>
           </li>
         ))}
+        <li className="navbar-item">
+          <Link
+            to="/notes"
+            className={`navbar-link${activePage === 'notes' ? ' active' : ''}`}
+            data-nav-link
+          >
+            Notes
+          </Link>
+        </li>
       </ul>
     </nav>
   )

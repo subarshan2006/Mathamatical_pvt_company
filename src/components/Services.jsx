@@ -89,6 +89,18 @@ function Services({ activePage, setActivePage }) {
             </div>
           </li>
 
+          <li className="service-item" style={{ cursor: 'default' }}>
+            <div className="service-icon-box">
+              <ion-icon name="shield-checkmark-outline" style={{ fontSize: '32px', color: 'var(--orange-yellow-crayola)' }}></ion-icon>
+            </div>
+            <div className="service-content-box">
+              <h4 className="h4 service-item-title">No Advanced Payment</h4>
+              <blockquote className="services-quote" >
+                <p>"Trust is gained when actions meet words." — Chris Butler</p>
+              </blockquote>
+            </div>
+          </li>
+
         </ul>
       </section>
 
