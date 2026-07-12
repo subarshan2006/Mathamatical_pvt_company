@@ -1966,6 +1966,20 @@ textarea.form-input::-webkit-resizer { display: none; }
   margin-bottom: 30px;
 }
 
+.brand-title {
+  font-size: clamp(2rem, 8vw, 4rem);
+  font-weight: 700;
+  color: var(--white-2);
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  white-space: nowrap;
+  width: max-content;
+}
+
+.yellow-highlight {
+  color: var(--light-gray);
+}
+
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -2004,6 +2018,12 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .hero-title {
     text-align: center;
+  }
+
+  .brand-title {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(1.5rem, 8vw, 2.5rem);
   }
 
   .home section header {

@@ -66,6 +66,10 @@ function Home({ activePage, setActivePage }) {
 
       {/* Hero Section */}
       <section className="hero-section">
+        <h1 className="brand-title">
+          NXT STEP TUTORING
+        </h1>
+
         <div className="hero-badge">
           <ion-icon name="school-outline"></ion-icon>
           <span>Online Math Tutor · US &amp; Canada Curriculum | Available Globally</span>
