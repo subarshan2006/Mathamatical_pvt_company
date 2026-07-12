@@ -118,9 +118,10 @@ function NotesPage() {
         <iframe
           src={embedUrl}
           title={`${student.name}'s Session Notes`}
-          sandbox="allow-scripts allow-same-origin"
+          sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
           className="notes-iframe"
           loading="lazy"
+          allow="fullscreen"
         />
       </div>
 

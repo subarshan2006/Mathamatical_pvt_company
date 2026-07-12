@@ -3230,7 +3230,24 @@ article,
 
 @media (max-width: 767px) {
   .iframe-wrapper {
-    padding-top: 125%;
+    position: relative;
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 0;
+    padding-top: 0;
+    height: calc(100vh - 220px);
+    min-height: 350px;
+    border-radius: 0;
+    overflow: hidden;
+  }
+
+  .notes-iframe {
+    border-radius: 0;
+  }
+
+  .notes-footer {
+    padding: 12px 0;
   }
 }
 
