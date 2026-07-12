@@ -3,11 +3,11 @@ import { useState, useCallback, useRef, useEffect } from 'react'
 const feedbacks = [
   {
     text: "Kavitha has been teaching my daughter for the past 2 years. She is one of the best teachers I have seen. She is highly knowledgeable in her subjects and teaches kids as per the students level of understanding with lots of patience and kindness. My daughter improves a lot in Maths and now it has become her favorite subject due to Kavitha mam's teaching and guidance. She is a punctual person who values time and keeps the students very attentive in her class. We highly recommend her if you need the best Math Tutor for kids.",
-    author: "— Maha (Canada)"
+    author: "— Maha (Ontario)"
   },
   {
     text: "Mrs Kavitha has been teaching my 2 children for 3 years.We experienced great improvement in their Mathematics.Their scores improved significantly and they were able to be the top in their class ,especially Mathematics.Kavitha follows the same syllabus they have in their school.She is so helpful,patient,and always available when we needed help.Kavitha always make sure the topic is completely understood by the kids.My kids also love her and feel so comfortable with Kavitha.I highly recommend Kavitha for everyone who is looking for excellent Math teachers.Thank You.",
-    author: "Jeen Philip(Canada)"
+    author: "Jeen Philip(Texas)"
   },
   {
     text: "Thank you for making math fun and enjoyable! We've seen so much growth in our child's confidence and love for learning. We truly appreciate your patience, kindness, and dedication. Highly recommended!.",
