@@ -77,16 +77,15 @@ function Home({ activePage, setActivePage }) {
         </p>
 
         <div className="hero-cta-wrapper">
-          <button
+          <a
             className="hero-cta-btn primary"
-            onClick={() => {
-              setActivePage('contact')
-              window.scrollTo(0, 0)
-            }}
+            href="https://docs.google.com/forms/d/e/1FAIpQLScQ5j02hoEAjPNSjb7SOhjNzGnXARnFZ281JZst6DHF7nOWWA/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <ion-icon name="calendar-outline"></ion-icon>
             <span>Enroll now</span>
-          </button>
+          </a>
           <button
             className="hero-cta-btn secondary"
             onClick={() => {

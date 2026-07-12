@@ -183,16 +183,15 @@ function Services({ activePage, setActivePage }) {
           <p className="services-cta-text">
             I'm happy to talk through your child's needs before we begin.
           </p>
-          <button
+          <a
             className="hero-cta-btn primary services-cta-btn"
-            onClick={() => {
-              setActivePage('contact')
-              window.scrollTo(0, 0)
-            }}
+            href="https://docs.google.com/forms/d/e/1FAIpQLScQ5j02hoEAjPNSjb7SOhjNzGnXARnFZ281JZst6DHF7nOWWA/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <ion-icon name="calendar-outline"></ion-icon>
             <span>Check Availability</span>
-          </button>
+          </a>
           
           <ul className="social-list" style={{ justifyContent: 'center', marginTop: '30px' }}>
             <li className="social-item">
