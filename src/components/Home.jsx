@@ -68,7 +68,7 @@ function Home({ activePage, setActivePage }) {
       <section className="hero-section">
         <div className="hero-badge">
           <ion-icon name="school-outline"></ion-icon>
-          <span>Online Math Tutor · US &amp; Canada Curriculum</span>
+          <span>Online Math Tutor · US &amp; Canada Curriculum | Available Globally</span>
         </div>
 
         <h3 className="hero-title">
@@ -89,7 +89,7 @@ function Home({ activePage, setActivePage }) {
             }}
           >
             <ion-icon name="calendar-outline"></ion-icon>
-            <span>Book a Trial Session</span>
+            <span>Enroll now</span>
           </button>
           <button
             className="hero-cta-btn secondary"

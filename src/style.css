@@ -606,6 +606,39 @@ main {
   line-height: 1.6;
 }
 
+.service-continue {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-5);
+  cursor: pointer;
+  transition: var(--transition-1);
+}
+
+.service-continue:hover {
+  color: var(--bright-orange);
+  text-decoration: underline;
+}
+
+.service-fee-list {
+  margin-top: 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.service-fee-list li {
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-4);
+  margin-bottom: 4px;
+}
+
+.service-fee-list li::before {
+  content: "✓ ";
+  font-weight: var(--fw-7);
+}
+
 
 /**
  * #testimonials 
@@ -2229,8 +2262,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .contact-cta-card {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 16px;
+  text-align: center;
+  gap: 8px;
   position: relative;
   background: var(--border-gradient-onyx);
   padding: 22px;
@@ -2420,6 +2455,19 @@ textarea.form-input::-webkit-resizer { display: none; }
   font-size: 20px;
   flex-shrink: 0;
   margin-top: 2px;
+}
+
+.services-quote {
+  border-left: 3px solid var(--orange-yellow-crayola);
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.services-quote p {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  line-height: 1.6;
 }
 
 .services-cta {
@@ -3001,6 +3049,60 @@ article,
   color: var(--light-gray);
   font-size: var(--fs-6);
   line-height: 1.6;
+}
+
+.notes-access-form {
+  max-width: 400px;
+}
+
+.notes-input-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--border-gradient-onyx);
+  padding: 12px 18px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.notes-input-group::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.notes-input-group ion-icon {
+  font-size: 20px;
+  color: var(--orange-yellow-crayola);
+  flex-shrink: 0;
+}
+
+.notes-input {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--white-2);
+  font-family: inherit;
+  font-size: var(--fs-6);
+  width: 100%;
+  padding: 4px 0;
+}
+
+.notes-input::placeholder {
+  color: var(--light-gray-70);
+}
+
+.notes-error {
+  color: #ff4444;
+  font-size: var(--fs-7);
+  margin-bottom: 12px;
+  padding-left: 4px;
+  font-weight: var(--fw-500);
 }
 
 .students-list {
