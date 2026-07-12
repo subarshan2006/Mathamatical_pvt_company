@@ -11,7 +11,7 @@ function Contact({ activePage }) {
           Let's help your child build confidence in math.
         </h3>
         <p className="contact-intro-text">
-          Reach out to schedule a trial session, ask about pricing, or check current
+          Reach out to schedule a session, ask about pricing, or check current
           availability for your time zone.
         </p>
       </section>
@@ -59,7 +59,7 @@ function Contact({ activePage }) {
                 <ion-icon name="calendar-outline"></ion-icon>
               </div>
               <div>
-                <h5 className="h5">Trial Session</h5>
+                <h5 className="h5">First Session</h5>
                 <p className="availability-text">Introductory session to assess fit &amp; goals</p>
               </div>
             </li>
