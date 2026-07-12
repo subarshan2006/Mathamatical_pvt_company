@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import './style.css'
 import Sidebar from './components/Sidebar'
 import Navbar from './components/Navbar'
@@ -59,7 +59,14 @@ function App() {
 }
 
 function MainSiteRoutes() {
-  const [activePage, setActivePage] = useState('home')
+  const location = useLocation()
+  const [activePage, setActivePage] = useState(() => location.state?.activePage || 'home')
+
+  useEffect(() => {
+    if (location.state?.activePage) {
+      setActivePage(location.state.activePage)
+    }
+  }, [location.state])
 
   return (
     <Layout activePage={activePage} setActivePage={setActivePage}>
