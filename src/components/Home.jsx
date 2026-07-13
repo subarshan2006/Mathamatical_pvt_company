@@ -84,6 +84,14 @@ function Home({ activePage, setActivePage }) {
     })
   }, [])
 
+  const renderLetters = (text, startIndex = 0) => {
+    return text.split('').map((char, i) => (
+      <span key={startIndex + i} className="typewriter-letter">
+        {char === ' ' ? '\u00A0' : char}
+      </span>
+    ))
+  }
+
   return (
     <article className={`home${activePage === 'home' ? ' active' : ''}`} data-page="home">
 
@@ -95,8 +103,8 @@ function Home({ activePage, setActivePage }) {
       <section className="hero-section">
         <h1 className="brand-title typewriter-text">
           {displayedText.length <= 11
-            ? <>{displayedText}<span className="typewriter-cursor">|</span></>
-            : <>{displayedText.slice(0, 11)}<br className="mobile-break" />{displayedText.slice(11)}<span className="typewriter-cursor">|</span></>
+            ? <>{renderLetters(displayedText)}<span className="typewriter-cursor">|</span></>
+            : <>{renderLetters(displayedText.slice(0, 11))}<br className="mobile-break" />{renderLetters(displayedText.slice(11), 11)}<span className="typewriter-cursor">|</span></>
           }
         </h1>
 
