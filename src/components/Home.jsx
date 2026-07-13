@@ -19,11 +19,46 @@ const feedbacks = [
 }
 ]
 
+const TYPEWRITER_TEXT = "WELCOME TO NXT STEP TUTORING"
+const TYPING_SPEED = 100
+const DELETING_SPEED = 60
+const PAUSE_AFTER_TYPING = 2000
+const PAUSE_AFTER_DELETING = 800
+
 function Home({ activePage, setActivePage }) {
   const [expanded, setExpanded] = useState({})
   const [overflow, setOverflow] = useState({})
   const marqueeRef = useRef(null)
   const textRefs = useRef([])
+  const [displayedText, setDisplayedText] = useState('')
+  const [isTyping, setIsTyping] = useState(true)
+
+  // Typewriter effect
+  useEffect(() => {
+    let timeout
+    if (isTyping) {
+      if (displayedText.length < TYPEWRITER_TEXT.length) {
+        timeout = setTimeout(() => {
+          setDisplayedText(TYPEWRITER_TEXT.slice(0, displayedText.length + 1))
+        }, TYPING_SPEED)
+      } else {
+        timeout = setTimeout(() => {
+          setIsTyping(false)
+        }, PAUSE_AFTER_TYPING)
+      }
+    } else {
+      if (displayedText.length > 0) {
+        timeout = setTimeout(() => {
+          setDisplayedText(TYPEWRITER_TEXT.slice(0, displayedText.length - 1))
+        }, DELETING_SPEED)
+      } else {
+        timeout = setTimeout(() => {
+          setIsTyping(true)
+        }, PAUSE_AFTER_DELETING)
+      }
+    }
+    return () => clearTimeout(timeout)
+  }, [displayedText, isTyping])
 
   useEffect(() => {
     textRefs.current.forEach((el, i) => {
@@ -58,8 +93,11 @@ function Home({ activePage, setActivePage }) {
 
       {/* Hero Section */}
       <section className="hero-section">
-        <h1 className="brand-title">
-          NXT STEP TUTORING
+        <h1 className="brand-title typewriter-text">
+          {displayedText.length <= 11
+            ? <>{displayedText}<span className="typewriter-cursor">|</span></>
+            : <>{displayedText.slice(0, 11)}<br className="mobile-break" />{displayedText.slice(11)}<span className="typewriter-cursor">|</span></>
+          }
         </h1>
 
         <div className="hero-badge">
