@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Not Found</title>
+  <title>Redirecting...</title>
   <script>
-    // GitHub Pages SPA redirect
-    var pathSegmentsToKeep = 1; // Keep /Mathamatical_pvt_company/
+    // GitHub Pages SPA redirect for custom domain (root-level, no repo subfolder)
+    var pathSegmentsToKeep = 0;
     var l = window.location;
     l.replace(
       l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +

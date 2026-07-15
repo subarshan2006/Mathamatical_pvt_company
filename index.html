@@ -10,10 +10,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="/assets/index-rM0jv38r.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-uglpewpX.css">
+    <script type="module" crossorigin src="/assets/index-CrpdU3wN.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Yd5Kteji.css">
   </head>
   <body>
+    <!-- GitHub Pages SPA redirect decoder: converts /?/path/here back to /path/here -->
+    <script>
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        // Decode the query-string-encoded path from 404.html redirect
+        var l = window.location;
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&');
+          }).join('?');
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      })();
+    </script>
     <div id="root"></div>
 
     <!-- ionicon link -->
