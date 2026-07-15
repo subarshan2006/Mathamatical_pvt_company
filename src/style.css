@@ -3551,10 +3551,6 @@ article,
 }
 
 @media (max-width: 767px) {
-  main {
-    overflow-x: hidden;
-  }
-
   .iframe-wrapper {
     position: relative;
     width: 100%;
