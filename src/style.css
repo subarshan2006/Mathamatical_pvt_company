@@ -3560,7 +3560,7 @@ article,
     min-height: 400px;
     border-radius: 0;
     overflow-x: auto;
-    overflow-y: hidden;
+    overflow-y: auto;
   }
 
   .notes-iframe {
