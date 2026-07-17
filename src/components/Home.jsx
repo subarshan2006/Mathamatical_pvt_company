@@ -14,6 +14,10 @@ const feedbacks = [
     author: "Joshna (Ontario)"
   },
   {
+    text: "I highly recommend Mrs. Kavitha! She really helped my daughter to get better at math and feel more confident in the subject. Her way of teaching is very engaging and proactive. She doesn't just help students catch up when they fall behind. Works ahead to make sure they really understand each concept before quizzes and tests.Mrs. Kavitha is very patient and encouraging. She always checks if my daughter is on track and well-prepared which has made a difference in how she understands and performs in math. We are really thankful, for her work and dedication. We highly recommend her to any parent looking for a math tutor!.",
+    author: "Chitra menon (Maryland)"
+  },
+  {
     text: "Kavitha is an excellent Math teacher. She is patient, professional, and very knowledgeable. She makes sure my son understands every concept clearly by giving regular homework and revision exercises. Her teaching method has helped improve his confidence and interest in Math. My son always looks forward to her classes. I highly recommend Kavitha to anyone looking for a dedicated and caring Math tutor.",
     author: "Mahe (Ontario)"
 }
